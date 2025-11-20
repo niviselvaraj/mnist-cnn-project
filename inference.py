@@ -2,7 +2,7 @@ import os
 import sys
 import config
 from models import MobileNetClassifier
-from utils import video_processor,preprocessing,visualization
+from utils importextract_frames, preprocess_batch, print_results_summary
 
 def classify_video(video_path):
     if os.path.exists(video_path):
@@ -21,7 +21,7 @@ def classify_video(video_path):
     print("result summary")
     print_results_summary(predictions,len(frames))
 
-if __name__='__main__':
+if __name__=='__main__':
     if len(sys.argv)<2:
         print("python inference")
         sys.exit(1)
